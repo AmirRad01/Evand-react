@@ -1,38 +1,330 @@
-.App {
-  text-align: center;
+/* fonts */
+
+@font-face {
+  font-family: yekan;
+  src: url('./assets/fonts/Yekan.woff');
+  src: url('./assets/fonts/Yekan.eot');
+  src: url('./assets/fonts/Yekan.svg');
+  src: url('./assets/fonts/Yekan.ttf');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: marker;
+  src: url('./assets/fonts/IRANMarker.ttf');
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: tanha;
+  src: url('./assets/fonts/Tanha.woff');
+  src: url('./assets/fonts/Tanha.eot');
+  src: url('./assets/fonts/Tanha.ttf');
+  src: url('./assets/fonts/Tanha.woff2');
+  src: url('./assets/fonts/Tanha-FD.eot');
+  src: url('./assets/fonts/Tanha-FD.ttf');
+  src: url('./assets/fonts/Tanha-FD.woff');
+  src: url('./assets/fonts/Tanha-FD.woff2');
+  src: url('./assets/fonts/Tanha-WOL.eot');
+  src: url('./assets/fonts/Tanha-WOL.ttf');
+  src: url('./assets/fonts/Tanha-WOL.woff');
+  src: url('./assets/fonts/Tanha-FD-WOL.woff2');
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: yekan;
+  direction: rtl;
+}
+
+h3 {
+  font-weight: 700;
+}
+
+h2 {
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+a:hover {
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul {
+  list-style: none;
+}
+
+/* navbar */
+
+.navbar {
+  background-color: white;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+.navbar-brand{
+ border-right: 1px solid lightgray;
+}
+.navbar-brand img {
+  width: 110px;
+  height: 50px;
+}
+
+form {
+  width: auto;
+  justify-content: center;
+  padding: 5px;
+  align-items: center;
+  border-right: 1px solid lightgray;
+}
+
+
+.searchbtn {
+  border: none;
+  box-sizing: inherit;
+
+}
+
+.searchbtn i {
+  font-style: italic;
+  border: none;
+  background-color: white;
+}
+
+.search-box {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border: none;
+  padding-right: 0;
+  transition: all .3s ease-out;
+}
+
+.search-box:focus {
+  padding-right: 50px;
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-color: rgba(211, 211, 211, 0.288);
+}
+
+/* main */
+
+/* section1 */
+
+.header-package-container {
+  color: #666666;
+  font-size: 1rem;
+  border: 1px solid lightgray;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+
+.header-package-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #ffffff67 !important;
+  background-color: #8080807a;
+  padding: 35px !important;
+  transition: all .3s ease-out;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: white !important;
+}
+
+/* section2 */
+
+
+.favorites-head-title {
+  display: flex;
+  align-items: center;
+}
+
+#class-status {
+  padding-left: 50px;
+  height: 35px;
+}
+
+.favorites-list ul {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.favorites-list ul li {
+  cursor: pointer;
+}
+
+
+.fav-package {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.fav-article {
+  cursor: pointer;
+  color: #666666;
+  font-size: 1rem;
+  border: 1px solid lightgray;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  width: 250px;
+}
+
+.fav-article img {
+  width: 100%;
+}
+
+/* section3 */
+
+.Topsale-package {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* section4 */
+
+.evand-organizers {
+  background-image: url('./assets//images/evand-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-clip: unset;
+  background-position: center;
+  height: auto;
+  padding: 50px 15px;
+}
+
+.organizers-title {
+  font-size: 1.8rem;
+  color: white;
+  font-weight: 600;
+}
+
+.evand-organizers span {
+  font-size: 2rem;
+}
+
+.organizers-carousel-item {
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 500;
+}
+
+.organizers {
+  background-image: url('./assets/images/orgs.png');
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-clip: content-box;
+  background-position: center;
+  height: 200px;
+  background-color: white;
+  border-radius: 35px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.organizers a {
+  width: 133px;
+  height: 100%;
+}
+
+/* section5 */
+
+.OrganizersTopSale-article {
+  border: 1px solid lightgray;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  cursor: pointer;
+  padding: 50px 30px;
+  width: 100%;
+}
+
+.event-info span {
+  color: gray;
+}
+
+
+.OrganizersTopSale-article button {
+  padding: 10px;
+  background-color: white;
+  font-weight: 600;
+}
+
+
+/* footer */
+
+footer {
+  background-color: #132a3e;
+  width: 100%;
+  color: white;
+  padding: 15px 100px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.footer-list-container {
+  font-size: 0.9rem;
+}
+
+.list-item-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.head-title {
+  font-weight: 700;
+  display: block;
+}
+
+
+.customer-support {
+  border: 1px solid white;
+  align-items: center;
+  width: 50%;
+}
+
+.customer-support span {
+  background-color: white;
+  color: gray;
+  font-size: 1.2rem;
+}
+
+.applications img {
+  width: 100%;
+}
+
+.about-evand ul {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.expand-support-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: auto;
+  font-size: 1.5rem;
+}
+
+.expand-support-container i {
+  background-color: white;
+  color: gray;
+  padding: 6px 15px;
+}
+
+.expand-support-container a {
+  border: 1px solid white;
+  padding: 5px 5px;
 }
